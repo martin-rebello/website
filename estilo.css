@@ -1,21 +1,16 @@
 /*
 ====================================
   MOBILE FIRST STYLES (Default - for screens < 768px)
-  Using REM and % for relative sizing
+  Using VW for relative sizing
 ====================================
 */
-
-/* Define 1rem as 16px (browser default) or adjust for global scaling */
-:root {
-    font-size: 16px; 
-}
 
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     background: rgb(232, 232, 232);
-    width: 100%;
+    width: 100vw; /* Use vw for 100% width */
     height: auto;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -25,18 +20,18 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    width: 100%;
+    width: 100vw;
 }
 
 /* --- Header & Navigation --- */
 
 header {
-    font-size: 1.5rem; /* ~24px */
+    font-size: 4.17vw; /* ~60px on 1440px base, scales for mobile */
     text-align: center;
     color: white;
     height: auto;
-    padding: 0.9375rem 0; /* ~15px */
-    width: 100%;
+    padding: 1.04vw 0; /* ~15px on 1440px base */
+    width: 100vw;
     background: black;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
@@ -45,32 +40,32 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.625rem; /* ~10px */
-    padding-bottom: 0.625rem; /* ~10px */
+    gap: 0.69vw; /* ~10px */
+    padding-bottom: 0.69vw; /* ~10px */
 }
 
 header a {
     color: white;
     text-decoration: none;
-    font-size: 0.875rem; /* ~14px */
+    font-size: 0.97vw; /* ~14px */
     font-weight: 700;
 }
 
 /* --- Main Content Sections --- */
 
 section {
-    margin: 1.25rem 0; /* ~20px */
-    padding: 0 0.9375rem; /* ~15px */
-    width: 100%;
+    margin: 1.39vw 0; /* ~20px */
+    padding: 0 1.04vw; /* ~15px */
+    width: 100vw;
     display: flex;
     flex-direction: column;
-    gap: 1.25rem; /* ~20px */
+    gap: 1.39vw; /* ~20px */
     box-sizing: border-box;
 }
 
 .imagen,
 .imagen2 {
-    border-radius: 0.625rem; /* ~10px */
+    border-radius: 0.69vw; /* ~10px */
     height: auto;
     width: 100%;
     object-fit: cover;
@@ -79,17 +74,17 @@ section {
 .sec_imagenes {
     display: flex;
     flex-direction: column;
-    gap: 0.9375rem; /* ~15px */
+    gap: 1.04vw; /* ~15px */
     width: 100%;
 }
 
 span {
     display: flex;
     flex-direction: column;
-    gap: 0.625rem; /* ~10px */
+    gap: 0.69vw; /* ~10px */
     background: white;
-    border-radius: 0.625rem; /* ~10px */
-    box-shadow: 0.125rem 0.125rem rgba(0, 0, 0, 0.100); /* ~2px ~2px */
+    border-radius: 0.69vw; /* ~10px */
+    box-shadow: 0.14vw 0.14vw rgba(0, 0, 0, 0.100); /* ~2px */
 }
 
 .textos {
@@ -97,8 +92,8 @@ span {
     flex-direction: column;
     align-items: flex-start;
     font-weight: bolder;
-    font-size: 1.125rem; /* Adjusted for mobile */
-    padding: 0.625rem; /* ~10px */
+    font-size: 1.25vw; /* ~18px */
+    padding: 0.69vw; /* ~10px */
 }
 
 .textos2 {
@@ -106,32 +101,32 @@ span {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    gap: 0.3125rem; /* ~5px */
-    padding: 0 0.625rem 0.625rem; /* ~10px */
+    gap: 0.35vw; /* ~5px */
+    padding: 0 0.69vw 0.69vw; /* ~10px */
 }
 
 .textos2 p {
     color: gray;
     font-weight: 100;
-    font-size: 0.75rem; /* ~12px */
+    font-size: 0.83vw; /* ~12px */
 }
 
 .textos2 a {
     text-align: left;
     color: #0000EE;
-    font-size: 0.75rem; /* ~12px */
+    font-size: 0.83vw; /* ~12px */
     text-decoration: none;
 }
 
 /* --- Latest News (u_noticias) --- */
 
 .desarrollo {
-    margin: 1.25rem 0; /* ~20px */
-    padding: 0 0.9375rem; /* ~15px */
-    width: 100%;
+    margin: 1.39vw 0; /* ~20px */
+    padding: 0 1.04vw; /* ~15px */
+    width: 100vw;
     display: flex;
     flex-direction: column;
-    gap: 1.25rem; /* ~20px */
+    gap: 1.39vw; /* ~20px */
     box-sizing: border-box;
 }
 
@@ -139,11 +134,11 @@ span {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 0.625rem; /* ~10px */
+    gap: 0.69vw; /* ~10px */
 }
 
 .imagen3 {
-    border-radius: 0.625rem 0.625rem 0 0; /* ~10px */
+    border-radius: 0.69vw 0.69vw 0 0; /* ~10px */
     height: auto;
     width: 100%;
 }
@@ -153,8 +148,8 @@ span {
     flex-direction: column;
     align-items: flex-start;
     font-weight: bolder;
-    font-size: 1.5rem; /* ~24px */
-    padding: 0.625rem; /* ~10px */
+    font-size: 1.67vw; /* ~24px */
+    padding: 0.69vw; /* ~10px */
 }
 
 .textos4 {
@@ -162,48 +157,48 @@ span {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    gap: 0.3125rem; /* ~5px */
-    padding: 0 0.625rem; /* ~10px */
+    gap: 0.35vw; /* ~5px */
+    padding: 0 0.69vw; /* ~10px */
 }
 
 .textos4 p {
     color: gray;
     font-weight: 100;
-    font-size: 0.75rem; /* ~12px */
+    font-size: 0.83vw; /* ~12px */
 }
 
 .textos4 a {
     text-align: left;
     color: #0000EE;
-    font-size: 0.75rem; /* ~12px */
+    font-size: 0.83vw; /* ~12px */
     text-decoration: none;
 }
 
 .textos5 p {
-    font-size: 1rem; /* ~16px */
+    font-size: 1.11vw; /* ~16px */
     font-weight: 100;
-    padding: 0 0.625rem 0.625rem; /* ~10px */
+    padding: 0 0.69vw 0.69vw; /* ~10px */
 }
 
 .titulos {
-    margin: 1.25rem 0.9375rem 0.625rem; /* ~20px ~15px ~10px */
-    font-size: 1.25rem; /* ~20px */
+    margin: 1.39vw 1.04vw 0.69vw; /* ~20px ~15px ~10px */
+    font-size: 1.39vw; /* ~20px */
     font-weight: bold;
     display: flex;
     flex-direction: column;
-    gap: 0.625rem; /* ~10px */
+    gap: 0.69vw; /* ~10px */
 }
 
 /* --- Social Media and Footer --- */
 
 .red_sociales {
-    padding: 0 0.9375rem; /* ~15px */
+    padding: 0 1.04vw; /* ~15px */
     margin-right: 0;
-    width: 100%;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     text-align: center;
-    font-size: 1rem; /* ~16px */
+    font-size: 1.11vw; /* ~16px */
     font-weight: 100;
     box-sizing: border-box;
 }
@@ -212,23 +207,23 @@ span {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.625rem; /* ~10px */
+    gap: 0.69vw; /* ~10px */
 }
 
 .red_sociales a {
-    font-size: 1rem; /* ~16px */
+    font-size: 1.11vw; /* ~16px */
     text-decoration: none;
     color: white;
 }
 
-/* Using vh for height/width is fine here as it scales with viewport */
+/* Using a combination of vw and vh for buttons */
 .twitter,
 .facebook,
 .youtube,
 .instagram {
     width: 100%;
-    max-width: 18.75rem; /* ~300px */
-    height: 2.8125rem; /* ~45px */
+    max-width: 20.83vw; /* ~300px */
+    height: 6.25vh; /* Scales with viewport height */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -244,15 +239,15 @@ span {
 
 footer {
     display: flex;
-    margin-top: 1.875rem; /* ~30px */
-    padding: 0.9375rem; /* ~15px */
-    font-size: 0.875rem; /* ~14px */
+    margin-top: 2.08vw; /* ~30px */
+    padding: 1.04vw; /* ~15px */
+    font-size: 0.97vw; /* ~14px */
     text-align: center;
     justify-content: center;
     align-items: center;
     color: white;
     height: auto;
-    width: 100%;
+    width: 100vw;
     background: black;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
@@ -261,43 +256,43 @@ footer {
 
 form {
     background-color: rgb(0, 0, 0);
-    padding: 1.25rem; /* ~20px */
-    border-radius: 0.5rem; /* ~8px */
-    box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.1); /* ~10px */
+    padding: 1.39vw; /* ~20px */
+    border-radius: 0.56vw; /* ~8px */
+    box-shadow: 0 0 0.69vw rgba(0, 0, 0, 0.1); /* ~10px */
     width: 90%;
-    margin: 1.25rem auto; /* ~20px */
+    margin: 1.39vw auto; /* ~20px */
     font-family: Arial, Helvetica, sans-serif;
     color: white;
     box-sizing: border-box;
 }
 
 form div {
-    margin-bottom: 0.9375rem; /* ~15px */
+    margin-bottom: 1.04vw; /* ~15px */
 }
 
 label {
     display: block;
-    margin-bottom: 0.3125rem; /* ~5px */
+    margin-bottom: 0.35vw; /* ~5px */
     font-weight: bold;
 }
 
 input[type="text"],
 select {
     width: 100%;
-    padding: 0.625rem; /* ~10px */
-    border: 0.0625rem solid #ccc; /* ~1px */
-    border-radius: 0.25rem; /* ~4px */
+    padding: 0.69vw; /* ~10px */
+    border: 0.07vw solid #ccc; /* ~1px */
+    border-radius: 0.28vw; /* ~4px */
     box-sizing: border-box;
 }
 
 button {
     background-color: #007bff;
     color: white;
-    padding: 0.625rem 0.9375rem; /* ~10px ~15px */
+    padding: 0.69vw 1.04vw; /* ~10px ~15px */
     border: none;
-    border-radius: 0.25rem; /* ~4px */
+    border-radius: 0.28vw; /* ~4px */
     cursor: pointer;
-    font-size: 1rem; /* ~16px */
+    font-size: 1.11vw; /* ~16px */
     width: 100%;
     box-sizing: border-box;
 }
@@ -313,38 +308,38 @@ button {
 /*
 ====================================
   DESKTOP STYLES (for screens >= 768px)
-  Using REM and % for relative sizing
+  Using VW for relative sizing
 ====================================
 */
-@media (min-width: 48rem) { /* 768px / 16px = 48rem */
+@media (min-width: 768px) {
     
     /* --- Header & Navigation --- */
     header {
-        font-size: 2.5rem; /* ~40px */
+        font-size: 2.78vw; /* ~40px */
         height: 14vh;
         padding: 0;
     }
 
     nav {
         flex-direction: row;
-        gap: 2.8125rem; /* ~45px */
+        gap: 3.125vw; /* ~45px */
     }
 
     header a {
-        margin-top: 2.1875rem; /* ~35px */
-        font-size: 0.875rem; /* ~14px */
+        margin-top: 2.43vw; /* ~35px */
+        font-size: 0.97vw; /* ~14px */
     }
 
     /* --- Main Content Sections (Section 1) --- */
 
     section {
-        margin-left: 6.25rem; /* ~100px */
+        margin-left: 6.94vw; /* ~100px */
         padding: 0;
-        width: calc(100% - 6.25rem);
-        max-width: 90%;
+        width: calc(100vw - 6.94vw);
+        max-width: 90vw;
         flex-direction: row;
-        margin-top: 3.125rem; /* ~50px */
-        gap: 1.5625rem; /* ~25px */
+        margin-top: 3.47vw; /* ~50px */
+        gap: 1.74vw; /* ~25px */
     }
     
     .imagen {
@@ -353,100 +348,100 @@ button {
 
     .sec_imagenes {
         width: 42%;
-        gap: 0.9375rem; /* ~15px */
+        gap: 1.04vw; /* ~15px */
     }
     
     .imagen2 {
-        border-radius: 0.625rem 0 0 0.625rem; /* ~10px */
+        border-radius: 0.69vw 0 0 0.69vw; /* ~10px */
         width: 100%;
     }
 
     span {
         flex-direction: row;
-        gap: 0.9375rem; /* ~15px */
+        gap: 1.04vw; /* ~15px */
     }
     
     .textos {
-        font-size: 1.125rem; /* ~18px */
+        font-size: 1.25vw; /* ~18px */
     }
 
     .textos2 {
         flex-direction: row;
-        gap: 1.875rem; /* ~30px */
+        gap: 2.08vw; /* ~30px */
         padding: 0;
     }
     
     .textos2 p {
-        font-size: 1rem; /* ~16px */
+        font-size: 1.11vw; /* ~16px */
     }
     
     .textos2 a {
-        font-size: 1rem; /* ~16px */
+        font-size: 1.11vw; /* ~16px */
     }
 
     /* --- Latest News (Section 2 - desarrollo) --- */
     
     .desarrollo {
-        margin-left: 6.25rem; /* ~100px */
+        margin-left: 6.94vw; /* ~100px */
         padding: 0;
         flex-direction: row;
-        gap: 1.25rem; /* ~20px */
-        margin-bottom: 1.5625rem; /* ~25px */
-        width: calc(100% - 6.25rem);
+        gap: 1.39vw; /* ~20px */
+        margin-bottom: 1.74vw; /* ~25px */
+        width: calc(100vw - 6.94vw);
     }
 
     .u_noticias {
         flex-direction: row;
         background: white;
-        border-radius: 0.625rem; /* ~10px */
-        box-shadow: 0.125rem 0.125rem rgba(0, 0, 0, 0.100);
+        border-radius: 0.69vw; /* ~10px */
+        box-shadow: 0.14vw 0.14vw rgba(0, 0, 0, 0.100);
     }
 
     .imagen3 {
-        border-radius: 0.625rem 0 0 0.625rem; /* ~10px */
+        border-radius: 0.69vw 0 0 0.69vw; /* ~10px */
         width: 40%;
     }
     
     .textos3 {
-        font-size: 2rem; /* ~32px */
+        font-size: 2.22vw; /* ~32px */
     }
     
     .textos4 {
         flex-direction: row;
-        gap: 1.875rem; /* ~30px */
+        gap: 2.08vw; /* ~30px */
     }
     
     .textos4 p {
-        font-size: 1rem; /* ~16px */
+        font-size: 1.11vw; /* ~16px */
     }
     
     .textos4 a {
-        font-size: 1rem; /* ~16px */
+        font-size: 1.11vw; /* ~16px */
     }
 
     .textos5 p {
-        padding: 0 0.625rem 0.625rem 0.625rem; /* ~10px */
+        padding: 0 0.69vw 0.69vw 0.69vw; /* ~10px */
     }
 
     .titulos {
-        margin-left: 6.25rem; /* ~100px */
+        margin-left: 6.94vw; /* ~100px */
         flex-direction: row;
-        gap: 51.5vw;
-        font-size: 1.5rem; /* ~24px */
+        gap: 51.5vw; /* Original value, kept as is */
+        font-size: 1.67vw; /* ~24px */
     }
     
     /* --- Social Media and Form --- */
     
     .red_sociales {
-        margin-right: 3.125rem; /* ~50px */
+        margin-right: 3.47vw; /* ~50px */
         padding: 0;
-        font-size: 1rem; /* ~16px */
+        font-size: 1.11vw; /* ~16px */
         text-align: start;
     }
 
     .botones {
         align-items: flex-start;
-        gap: 0.625rem; /* ~10px */
+        gap: 0.69vw; /* ~10px */
     }
 
     .twitter:hover,
@@ -454,21 +449,21 @@ button {
     .youtube:hover,
     .instagram:hover {
         transform: scale(1.05);
-        box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.2); /* ~4px ~10px */
+        box-shadow: 0 0.28vw 0.69vw rgba(0, 0, 0, 0.2); /* ~4px ~10px */
     }
 
     .twitter,
     .facebook,
     .youtube,
     .instagram {
-        width: 55vh;
-        height: 3.125rem; /* ~50px */
+        width: 38.19vw; /* ~550px on 1440px base. Changed from 55vh to vw for consistency */
+        height: 6.94vh; /* ~50px, scales with vh */
     }
 
     /* --- Form Styles --- */
     form {
-        width: 50%;
-        max-width: 37.5rem; /* ~600px */
+        width: 50vw;
+        max-width: 41.67vw; /* ~600px */
     }
 
     button {
@@ -479,9 +474,9 @@ button {
     .absoluto {
         display: flex;
         position: absolute;
-        top: 25rem; /* ~400px */
-        left: 3.75rem; /* ~60px */
-        width: 37%;
-        box-shadow: 0.125rem 0.125rem rgba(0, 0, 0, 0.200); /* ~2px ~2px */
+        top: 27.78vw; /* ~400px */
+        left: 4.17vw; /* ~60px */
+        width: 37vw;
+        box-shadow: 0.14vw 0.14vw rgba(0, 0, 0, 0.200); /* ~2px */
     }
 }

@@ -4,7 +4,7 @@ body{
     box-sizing: border-box;
     background: rgb(232, 232, 232);
     /* Mantengo 100% y auto para el cuerpo */
-    width: 100%;
+    width: 99%;
     height: auto;
     /* Defino un tamaño base de fuente en el body para que 'rem' funcione */
     font-size: 16px; 

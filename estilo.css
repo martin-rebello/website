@@ -37,7 +37,7 @@ nav{
     gap: 3vw; 
     
 }
-header a{
+header nav a{
     /* 35px -> 2.1875rem (35/16) */
     margin-top: 1.5rem; 
     color: white;

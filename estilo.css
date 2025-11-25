@@ -39,7 +39,7 @@ nav{
 }
 header a{
     /* 35px -> 2.1875rem (35/16) */
-    margin-top: 2rem; 
+    margin-top: 1.5rem; 
     color: white;
     text-decoration: none;
     /* small -> 0.8rem (aproximación) */

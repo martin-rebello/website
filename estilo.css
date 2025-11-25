@@ -1,7 +1,7 @@
 /*
 ====================================
   MOBILE FIRST STYLES (Default - for screens < 768px)
-  Using VW for relative sizing
+  Using VW for relative sizing - Images are now smaller (around 80% width)
 ====================================
 */
 
@@ -10,7 +10,7 @@ body {
     padding: 0;
     box-sizing: border-box;
     background: rgb(232, 232, 232);
-    width: 100vw; /* Use vw for 100% width */
+    width: 100vw;
     height: auto;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -26,11 +26,11 @@ body {
 /* --- Header & Navigation --- */
 
 header {
-    font-size: 4.17vw; /* ~60px on 1440px base, scales for mobile */
+    font-size: 4.17vw;
     text-align: center;
     color: white;
     height: auto;
-    padding: 1.04vw 0; /* ~15px on 1440px base */
+    padding: 1.04vw 0;
     width: 100vw;
     background: black;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -40,51 +40,57 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.69vw; /* ~10px */
-    padding-bottom: 0.69vw; /* ~10px */
+    gap: 0.69vw;
+    padding-bottom: 0.69vw;
 }
 
 header a {
     color: white;
     text-decoration: none;
-    font-size: 0.97vw; /* ~14px */
+    font-size: 0.97vw;
     font-weight: 700;
 }
 
 /* --- Main Content Sections --- */
 
 section {
-    margin: 1.39vw 0; /* ~20px */
-    padding: 0 1.04vw; /* ~15px */
+    margin: 1.39vw 0;
+    /* Increase horizontal padding to center content */
+    padding: 0 10vw; 
     width: 100vw;
     display: flex;
     flex-direction: column;
-    gap: 1.39vw; /* ~20px */
+    gap: 1.39vw;
     box-sizing: border-box;
 }
 
+/* Image adjustments for mobile: reduced from 100% width */
 .imagen,
 .imagen2 {
-    border-radius: 0.69vw; /* ~10px */
+    border-radius: 0.69vw;
     height: auto;
-    width: 100%;
+    width: 80vw; /* Reduced size (was 100%) */
     object-fit: cover;
+    align-self: center; /* Center the image in the section */
 }
 
 .sec_imagenes {
     display: flex;
     flex-direction: column;
-    gap: 1.04vw; /* ~15px */
+    gap: 1.04vw;
     width: 100%;
+    /* Align sec_imagenes to center on mobile to contain images better */
+    align-items: center; 
 }
 
 span {
     display: flex;
     flex-direction: column;
-    gap: 0.69vw; /* ~10px */
+    gap: 0.69vw;
     background: white;
-    border-radius: 0.69vw; /* ~10px */
-    box-shadow: 0.14vw 0.14vw rgba(0, 0, 0, 0.100); /* ~2px */
+    border-radius: 0.69vw;
+    box-shadow: 0.14vw 0.14vw rgba(0, 0, 0, 0.100);
+    width: 100%; /* Spans still take full width of their container */
 }
 
 .textos {
@@ -92,8 +98,8 @@ span {
     flex-direction: column;
     align-items: flex-start;
     font-weight: bolder;
-    font-size: 1.25vw; /* ~18px */
-    padding: 0.69vw; /* ~10px */
+    font-size: 1.25vw;
+    padding: 0.69vw;
 }
 
 .textos2 {
@@ -101,32 +107,33 @@ span {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    gap: 0.35vw; /* ~5px */
-    padding: 0 0.69vw 0.69vw; /* ~10px */
+    gap: 0.35vw;
+    padding: 0 0.69vw 0.69vw;
 }
 
 .textos2 p {
     color: gray;
     font-weight: 100;
-    font-size: 0.83vw; /* ~12px */
+    font-size: 0.83vw;
 }
 
 .textos2 a {
     text-align: left;
     color: #0000EE;
-    font-size: 0.83vw; /* ~12px */
+    font-size: 0.83vw;
     text-decoration: none;
 }
 
 /* --- Latest News (u_noticias) --- */
 
 .desarrollo {
-    margin: 1.39vw 0; /* ~20px */
-    padding: 0 1.04vw; /* ~15px */
+    margin: 1.39vw 0;
+    /* Increase horizontal padding to match section */
+    padding: 0 10vw; 
     width: 100vw;
     display: flex;
     flex-direction: column;
-    gap: 1.39vw; /* ~20px */
+    gap: 1.39vw;
     box-sizing: border-box;
 }
 
@@ -134,13 +141,14 @@ span {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 0.69vw; /* ~10px */
+    gap: 0.69vw;
+    align-items: center; /* Center the news item */
 }
 
 .imagen3 {
-    border-radius: 0.69vw 0.69vw 0 0; /* ~10px */
+    border-radius: 0.69vw 0.69vw 0 0;
     height: auto;
-    width: 100%;
+    width: 80vw; /* Reduced size (was 100%) */
 }
 
 .textos3 {
@@ -148,8 +156,9 @@ span {
     flex-direction: column;
     align-items: flex-start;
     font-weight: bolder;
-    font-size: 1.67vw; /* ~24px */
-    padding: 0.69vw; /* ~10px */
+    font-size: 1.67vw;
+    padding: 0.69vw;
+    width: 80vw;
 }
 
 .textos4 {
@@ -157,48 +166,50 @@ span {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    gap: 0.35vw; /* ~5px */
-    padding: 0 0.69vw; /* ~10px */
+    gap: 0.35vw;
+    padding: 0 0.69vw;
+    width: 80vw;
 }
 
 .textos4 p {
     color: gray;
     font-weight: 100;
-    font-size: 0.83vw; /* ~12px */
+    font-size: 0.83vw;
 }
 
 .textos4 a {
     text-align: left;
     color: #0000EE;
-    font-size: 0.83vw; /* ~12px */
+    font-size: 0.83vw;
     text-decoration: none;
 }
 
 .textos5 p {
-    font-size: 1.11vw; /* ~16px */
+    font-size: 1.11vw;
     font-weight: 100;
-    padding: 0 0.69vw 0.69vw; /* ~10px */
+    padding: 0 0.69vw 0.69vw;
+    width: 80vw;
 }
 
 .titulos {
-    margin: 1.39vw 1.04vw 0.69vw; /* ~20px ~15px ~10px */
-    font-size: 1.39vw; /* ~20px */
+    margin: 1.39vw 10vw 0.69vw; /* Match padding */
+    font-size: 1.39vw;
     font-weight: bold;
     display: flex;
     flex-direction: column;
-    gap: 0.69vw; /* ~10px */
+    gap: 0.69vw;
 }
 
 /* --- Social Media and Footer --- */
 
 .red_sociales {
-    padding: 0 1.04vw; /* ~15px */
+    padding: 0 10vw; /* Match padding */
     margin-right: 0;
     width: 100vw;
     display: flex;
     flex-direction: column;
     text-align: center;
-    font-size: 1.11vw; /* ~16px */
+    font-size: 1.11vw;
     font-weight: 100;
     box-sizing: border-box;
 }
@@ -207,23 +218,22 @@ span {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.69vw; /* ~10px */
+    gap: 0.69vw;
 }
 
 .red_sociales a {
-    font-size: 1.11vw; /* ~16px */
+    font-size: 1.11vw;
     text-decoration: none;
     color: white;
 }
 
-/* Using a combination of vw and vh for buttons */
 .twitter,
 .facebook,
 .youtube,
 .instagram {
     width: 100%;
-    max-width: 20.83vw; /* ~300px */
-    height: 6.25vh; /* Scales with viewport height */
+    max-width: 20.83vw;
+    height: 6.25vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -231,7 +241,6 @@ span {
     margin: 0 auto;
 }
 
-/* Re-added original button backgrounds (no changes needed) */
 .twitter { background: #1da1f2; }
 .facebook { background: #1877f2; }
 .youtube { background: #ff0000; }
@@ -239,9 +248,9 @@ span {
 
 footer {
     display: flex;
-    margin-top: 2.08vw; /* ~30px */
-    padding: 1.04vw; /* ~15px */
-    font-size: 0.97vw; /* ~14px */
+    margin-top: 2.08vw;
+    padding: 1.04vw;
+    font-size: 0.97vw;
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -256,43 +265,43 @@ footer {
 
 form {
     background-color: rgb(0, 0, 0);
-    padding: 1.39vw; /* ~20px */
-    border-radius: 0.56vw; /* ~8px */
-    box-shadow: 0 0 0.69vw rgba(0, 0, 0, 0.1); /* ~10px */
-    width: 90%;
-    margin: 1.39vw auto; /* ~20px */
+    padding: 1.39vw;
+    border-radius: 0.56vw;
+    box-shadow: 0 0 0.69vw rgba(0, 0, 0, 0.1);
+    width: 80vw; /* Made form smaller */
+    margin: 1.39vw auto;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
     box-sizing: border-box;
 }
 
 form div {
-    margin-bottom: 1.04vw; /* ~15px */
+    margin-bottom: 1.04vw;
 }
 
 label {
     display: block;
-    margin-bottom: 0.35vw; /* ~5px */
+    margin-bottom: 0.35vw;
     font-weight: bold;
 }
 
 input[type="text"],
 select {
     width: 100%;
-    padding: 0.69vw; /* ~10px */
-    border: 0.07vw solid #ccc; /* ~1px */
-    border-radius: 0.28vw; /* ~4px */
+    padding: 0.69vw;
+    border: 0.07vw solid #ccc;
+    border-radius: 0.28vw;
     box-sizing: border-box;
 }
 
 button {
     background-color: #007bff;
     color: white;
-    padding: 0.69vw 1.04vw; /* ~10px ~15px */
+    padding: 0.69vw 1.04vw;
     border: none;
-    border-radius: 0.28vw; /* ~4px */
+    border-radius: 0.28vw;
     cursor: pointer;
-    font-size: 1.11vw; /* ~16px */
+    font-size: 1.11vw;
     width: 100%;
     box-sizing: border-box;
 }
@@ -315,133 +324,129 @@ button {
     
     /* --- Header & Navigation --- */
     header {
-        font-size: 2.78vw; /* ~40px */
+        font-size: 2.78vw;
         height: 14vh;
         padding: 0;
     }
 
     nav {
         flex-direction: row;
-        gap: 3.125vw; /* ~45px */
+        gap: 3.125vw;
     }
 
     header a {
-        margin-top: 2.43vw; /* ~35px */
-        font-size: 0.97vw; /* ~14px */
+        margin-top: 2.43vw;
+        font-size: 0.97vw;
     }
 
     /* --- Main Content Sections (Section 1) --- */
 
     section {
-        margin-left: 6.94vw; /* ~100px */
-        padding: 0;
+        margin-left: 6.94vw;
+        /* Reduce padding back to 0, use original margin/width combo */
+        padding: 0; 
         width: calc(100vw - 6.94vw);
         max-width: 90vw;
         flex-direction: row;
-        margin-top: 3.47vw; /* ~50px */
-        gap: 1.74vw; /* ~25px */
+        margin-top: 3.47vw;
+        gap: 1.74vw;
     }
     
+    /* Image adjustments for desktop: proportional reduction applied to all images */
     .imagen {
-        width: 58%;
+        width: 46.4vw; /* Reduced from 58% of container to 46.4% */
+        align-self: auto;
     }
 
     .sec_imagenes {
-        width: 42%;
-        gap: 1.04vw; /* ~15px */
+        width: 48.6vw; /* Increased width to compensate for smaller images */
+        gap: 1.04vw;
+        align-items: flex-start;
     }
     
     .imagen2 {
-        border-radius: 0.69vw 0 0 0.69vw; /* ~10px */
-        width: 100%;
+        border-radius: 0.69vw 0 0 0.69vw;
+        width: 100%; /* Still full width of its container (sec_imagenes) */
     }
 
     span {
         flex-direction: row;
-        gap: 1.04vw; /* ~15px */
+        gap: 1.04vw;
     }
     
     .textos {
-        font-size: 1.25vw; /* ~18px */
+        font-size: 1.25vw;
     }
 
     .textos2 {
         flex-direction: row;
-        gap: 2.08vw; /* ~30px */
+        gap: 2.08vw;
         padding: 0;
-    }
-    
-    .textos2 p {
-        font-size: 1.11vw; /* ~16px */
-    }
-    
-    .textos2 a {
-        font-size: 1.11vw; /* ~16px */
     }
 
     /* --- Latest News (Section 2 - desarrollo) --- */
     
     .desarrollo {
-        margin-left: 6.94vw; /* ~100px */
-        padding: 0;
+        margin-left: 6.94vw;
+        padding: 0; /* Reduce padding back to 0 */
         flex-direction: row;
-        gap: 1.39vw; /* ~20px */
-        margin-bottom: 1.74vw; /* ~25px */
+        gap: 1.39vw;
+        margin-bottom: 1.74vw;
         width: calc(100vw - 6.94vw);
     }
 
     .u_noticias {
         flex-direction: row;
         background: white;
-        border-radius: 0.69vw; /* ~10px */
+        border-radius: 0.69vw;
         box-shadow: 0.14vw 0.14vw rgba(0, 0, 0, 0.100);
+        align-items: flex-start;
     }
 
     .imagen3 {
-        border-radius: 0.69vw 0 0 0.69vw; /* ~10px */
-        width: 40%;
+        border-radius: 0.69vw 0 0 0.69vw;
+        width: 32vw; /* Reduced from 40% of container to 32% */
+    }
+
+    .textos3,
+    .textos4,
+    .textos5 p {
+        width: auto; /* Reset width so content flows freely */
+        padding: initial; /* Reset padding to flow correctly */
     }
     
     .textos3 {
-        font-size: 2.22vw; /* ~32px */
+        font-size: 2.22vw;
     }
     
     .textos4 {
         flex-direction: row;
-        gap: 2.08vw; /* ~30px */
+        gap: 2.08vw;
     }
     
-    .textos4 p {
-        font-size: 1.11vw; /* ~16px */
-    }
-    
-    .textos4 a {
-        font-size: 1.11vw; /* ~16px */
-    }
-
     .textos5 p {
-        padding: 0 0.69vw 0.69vw 0.69vw; /* ~10px */
+        padding: 0 0.69vw 0.69vw 0.69vw;
     }
 
     .titulos {
-        margin-left: 6.94vw; /* ~100px */
+        margin-left: 6.94vw;
         flex-direction: row;
-        gap: 51.5vw; /* Original value, kept as is */
-        font-size: 1.67vw; /* ~24px */
+        gap: 51.5vw;
+        font-size: 1.67vw;
     }
     
     /* --- Social Media and Form --- */
     
     .red_sociales {
-        margin-right: 3.47vw; /* ~50px */
+        margin-right: 3.47vw;
         padding: 0;
-        font-size: 1.11vw; /* ~16px */
+        font-size: 1.11vw;
         text-align: start;
     }
 
     .botones {
         align-items: flex-start;
-        gap: 0.69vw; /* ~10px */
+        gap: 0.69vw;
     }
 
     .twitter:hover,
@@ -449,21 +454,21 @@ button {
     .youtube:hover,
     .instagram:hover {
         transform: scale(1.05);
-        box-shadow: 0 0.28vw 0.69vw rgba(0, 0, 0, 0.2); /* ~4px ~10px */
+        box-shadow: 0 0.28vw 0.69vw rgba(0, 0, 0, 0.2);
     }
 
     .twitter,
     .facebook,
     .youtube,
     .instagram {
-        width: 38.19vw; /* ~550px on 1440px base. Changed from 55vh to vw for consistency */
-        height: 6.94vh; /* ~50px, scales with vh */
+        width: 38.19vw;
+        height: 6.94vh;
     }
 
     /* --- Form Styles --- */
     form {
         width: 50vw;
-        max-width: 41.67vw; /* ~600px */
+        max-width: 41.67vw;
     }
 
     button {
@@ -474,9 +479,9 @@ button {
     .absoluto {
         display: flex;
         position: absolute;
-        top: 27.78vw; /* ~400px */
-        left: 4.17vw; /* ~60px */
+        top: 27.78vw;
+        left: 4.17vw;
         width: 37vw;
-        box-shadow: 0.14vw 0.14vw rgba(0, 0, 0, 0.200); /* ~2px */
+        box-shadow: 0.14vw 0.14vw rgba(0, 0, 0, 0.200);
     }
 }

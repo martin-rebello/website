@@ -1,487 +1,315 @@
-/*
-====================================
-  MOBILE FIRST STYLES (Default - for screens < 768px)
-  Using VW for relative sizing - Images are now smaller (around 80% width)
-====================================
-*/
-
-body {
+body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     background: rgb(232, 232, 232);
-    width: 100vw;
+    width: 100%;
     height: auto;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    
+}
+header{
+    font-size: 40px;
+    text-align: center;
+    color: white;
+    height: 14vh;
+    width: 100%;
+    background: black;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 45px;
+    
+}
+header a{
+    margin-top: 35px;
+    color: white;
+    text-decoration: none;
+    font-size: small;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight:700;
+}
+section{
+    margin-left: 100px;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    margin-top:50px ;
+    gap:25px;
+}
+
+.imagen{
+
+   border-radius: 10px;
+   height: auto;
+   width: 58%;
+}
+.imagen2{
+   border-radius: 10px 0 0 10px;
+   height: auto;
+   width: 42%;
+}
+
+.sec_imagenes{
+    display:flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    align-items: start;
+}
+span{
+    display: flex;
+    flex-direction: row;
+    gap: 15px ;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.100);
+}
+.textos{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    font-weight: bolder;
+    font-size:larger;
+    padding: 10px;
+}
+.textos2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.textos2 p{
+    color: gray;
+    font-weight: 100;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+}
+.textos2 a{
+    text-align: center;
+    color:#0000EE;
+    font-size: medium;
+    text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
 }
-
-.container {
+.desarrollo{
+    margin-left: 100px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+.u_noticias{
+    width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    width: 100vw;
+    gap: 10px;
 }
-
-/* --- Header & Navigation --- */
-
-header {
-    font-size: 4.17vw;
+.imagen3{
+   border-radius: 10px 0 0 10px;
+   height: auto;
+   width: 40%;
+}
+.textos3{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    font-weight: bolder;
+    font-size:xx-large;
+    padding: 10px
+}
+.textos4{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.textos4 p{
+    color: gray;
+    font-weight: 100;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+}
+.textos4 a{
     text-align: center;
-    color: white;
-    height: auto;
-    padding: 1.04vw 0;
-    width: 100vw;
-    background: black;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.69vw;
-    padding-bottom: 0.69vw;
-}
-
-header a {
-    color: white;
+    color:#0000EE;
+    font-size: medium;
     text-decoration: none;
-    font-size: 0.97vw;
-    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
 }
-
-/* --- Main Content Sections --- */
-
-section {
-    margin: 1.39vw 0;
-    /* Increase horizontal padding to center content */
-    padding: 0 10vw; 
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    gap: 1.39vw;
-    box-sizing: border-box;
-}
-
-/* Image adjustments for mobile: reduced from 100% width */
-.imagen,
-.imagen2 {
-    border-radius: 0.69vw;
-    height: auto;
-    width: 80vw; /* Reduced size (was 100%) */
-    object-fit: cover;
-    align-self: center; /* Center the image in the section */
-}
-
-.sec_imagenes {
-    display: flex;
-    flex-direction: column;
-    gap: 1.04vw;
-    width: 100%;
-    /* Align sec_imagenes to center on mobile to contain images better */
-    align-items: center; 
-}
-
-span {
-    display: flex;
-    flex-direction: column;
-    gap: 0.69vw;
-    background: white;
-    border-radius: 0.69vw;
-    box-shadow: 0.14vw 0.14vw rgba(0, 0, 0, 0.100);
-    width: 100%; /* Spans still take full width of their container */
-}
-
-.textos {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    font-weight: bolder;
-    font-size: 1.25vw;
-    padding: 0.69vw;
-}
-
-.textos2 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 0.35vw;
-    padding: 0 0.69vw 0.69vw;
-}
-
-.textos2 p {
-    color: gray;
+.textos5 p{
+    font-size: medium;
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: 100;
-    font-size: 0.83vw;
 }
-
-.textos2 a {
-    text-align: left;
-    color: #0000EE;
-    font-size: 0.83vw;
-    text-decoration: none;
-}
-
-/* --- Latest News (u_noticias) --- */
-
-.desarrollo {
-    margin: 1.39vw 0;
-    /* Increase horizontal padding to match section */
-    padding: 0 10vw; 
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    gap: 1.39vw;
-    box-sizing: border-box;
-}
-
-.u_noticias {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 0.69vw;
-    align-items: center; /* Center the news item */
-}
-
-.imagen3 {
-    border-radius: 0.69vw 0.69vw 0 0;
-    height: auto;
-    width: 80vw; /* Reduced size (was 100%) */
-}
-
-.textos3 {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    font-weight: bolder;
-    font-size: 1.67vw;
-    padding: 0.69vw;
-    width: 80vw;
-}
-
-.textos4 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 0.35vw;
-    padding: 0 0.69vw;
-    width: 80vw;
-}
-
-.textos4 p {
-    color: gray;
-    font-weight: 100;
-    font-size: 0.83vw;
-}
-
-.textos4 a {
-    text-align: left;
-    color: #0000EE;
-    font-size: 0.83vw;
-    text-decoration: none;
-}
-
-.textos5 p {
-    font-size: 1.11vw;
-    font-weight: 100;
-    padding: 0 0.69vw 0.69vw;
-    width: 80vw;
-}
-
-.titulos {
-    margin: 1.39vw 10vw 0.69vw; /* Match padding */
-    font-size: 1.39vw;
+.titulos{
+    margin-left: 100px;
+    margin-top: 25px;
+    font-size: x-large;
     font-weight: bold;
     display: flex;
-    flex-direction: column;
-    gap: 0.69vw;
+    flex-direction: row;
+    gap: 51.5vw;
 }
-
-/* --- Social Media and Footer --- */
-
-.red_sociales {
-    padding: 0 10vw; /* Match padding */
-    margin-right: 0;
-    width: 100vw;
+.red_sociales{
+    margin-right: 50px;
     display: flex;
     flex-direction: column;
-    text-align: center;
-    font-size: 1.11vw;
+    text-align: start;
+    font-size: large;
     font-weight: 100;
-    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    
 }
-
-.botones {
+.botones{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.69vw;
+    gap: 10px;
 }
-
-.red_sociales a {
-    font-size: 1.11vw;
+.red_sociales a{
+    font-size: large;
     text-decoration: none;
     color: white;
+    
 }
-
-.twitter,
-.facebook,
-.youtube,
-.instagram {
-    width: 100%;
-    max-width: 20.83vw;
-    height: 6.25vh;
+.twitter{
+    width: 55vh;
+    height: 50px;
     display: flex;
+    flex-direction: column;
+    background: #1da1f2;
     justify-content: center;
-    align-items: center;
     border: 0;
-    margin: 0 auto;
 }
-
-.twitter { background: #1da1f2; }
-.facebook { background: #1877f2; }
-.youtube { background: #ff0000; }
-.instagram { background: linear-gradient(to right, #833ab4, #fd1d1d, #fcaf45); }
-
-footer {
+.twitter:hover {
+    
+    transform: scale(1.05); 
+    
+    
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.facebook{
+    width: 55vh;
+    height: 50px;
     display: flex;
-    margin-top: 2.08vw;
-    padding: 1.04vw;
-    font-size: 0.97vw;
+    flex-direction: column;
+    background: #1877f2;
+    justify-content: center;
+    border: 0;
+}
+.facebook:hover {
+    
+    transform: scale(1.05); 
+    
+    
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.youtube{
+    width: 55vh;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    background: #ff0000;
+    justify-content: center;
+    border: 0;
+}
+.youtube:hover {
+    
+    transform: scale(1.05); 
+    
+    
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.instagram{
+    width: 55vh;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    background:linear-gradient(to right,#833ab4,#fd1d1d,#fcaf45);
+    justify-content: center;
+    border: 0;
+}
+.instagram:hover {
+    
+    transform: scale(1.05); 
+    
+    
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+footer{
+    display: flex;
+    margin-top: 50px;
+    font-size: medium;
     text-align: center;
     justify-content: center;
-    align-items: center;
     color: white;
     height: auto;
-    width: 100vw;
+    width: 100%;
     background: black;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-
-/* --- Form Styles --- */
-
 form {
     background-color: rgb(0, 0, 0);
-    padding: 1.39vw;
-    border-radius: 0.56vw;
-    box-shadow: 0 0 0.69vw rgba(0, 0, 0, 0.1);
-    width: 80vw; /* Made form smaller */
-    margin: 1.39vw auto;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    margin: auto;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
-    box-sizing: border-box;
 }
-
 form div {
-    margin-bottom: 1.04vw;
+    margin-bottom: 15px;
 }
-
 label {
     display: block;
-    margin-bottom: 0.35vw;
+    margin-bottom: 5px;
     font-weight: bold;
 }
-
-input[type="text"],
-select {
+input[type="text"], select {
     width: 100%;
-    padding: 0.69vw;
-    border: 0.07vw solid #ccc;
-    border-radius: 0.28vw;
-    box-sizing: border-box;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Asegura que padding no afecte el ancho total */
 }
-
 button {
     background-color: #007bff;
     color: white;
-    padding: 0.69vw 1.04vw;
+    padding: 10px 15px;
     border: none;
-    border-radius: 0.28vw;
+    border-radius: 4px;
     cursor: pointer;
-    font-size: 1.11vw;
-    width: 100%;
-    box-sizing: border-box;
+    font-size: 16px;
 }
-
 .subs:hover {
     background-color: #0056b3;
 }
-
-.absoluto {
-    display: none;
+.absoluto{
+    position: absolute;
+    top: 400px;
+    left: 60px;
+    width: 37%;
+    display: flex;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.200);
 }
-
-/*
-====================================
-  DESKTOP STYLES (for screens >= 768px)
-  Using VW for relative sizing
-====================================
-*/
-@media (min-width: 768px) {
-    
-    /* --- Header & Navigation --- */
-    header {
-        font-size: 2.78vw;
-        height: 14vh;
-        padding: 0;
-    }
-
-    nav {
-        flex-direction: row;
-        gap: 3.125vw;
-    }
-
-    header a {
-        margin-top: 2.43vw;
-        font-size: 0.97vw;
-    }
-
-    /* --- Main Content Sections (Section 1) --- */
-
-    section {
-        margin-left: 6.94vw;
-        /* Reduce padding back to 0, use original margin/width combo */
-        padding: 0; 
-        width: calc(100vw - 6.94vw);
-        max-width: 90vw;
-        flex-direction: row;
-        margin-top: 3.47vw;
-        gap: 1.74vw;
-    }
-    
-    /* Image adjustments for desktop: proportional reduction applied to all images */
-    .imagen {
-        width: 46.4vw; /* Reduced from 58% of container to 46.4% */
-        align-self: auto;
-    }
-
-    .sec_imagenes {
-        width: 48.6vw; /* Increased width to compensate for smaller images */
-        gap: 1.04vw;
-        align-items: flex-start;
-    }
-    
-    .imagen2 {
-        border-radius: 0.69vw 0 0 0.69vw;
-        width: 100%; /* Still full width of its container (sec_imagenes) */
-    }
-
-    span {
-        flex-direction: row;
-        gap: 1.04vw;
-    }
-    
-    .textos {
-        font-size: 1.25vw;
-    }
-
-    .textos2 {
-        flex-direction: row;
-        gap: 2.08vw;
-        padding: 0;
-    }
-
-    /* --- Latest News (Section 2 - desarrollo) --- */
-    
-    .desarrollo {
-        margin-left: 6.94vw;
-        padding: 0; /* Reduce padding back to 0 */
-        flex-direction: row;
-        gap: 1.39vw;
-        margin-bottom: 1.74vw;
-        width: calc(100vw - 6.94vw);
-    }
-
-    .u_noticias {
-        flex-direction: row;
-        background: white;
-        border-radius: 0.69vw;
-        box-shadow: 0.14vw 0.14vw rgba(0, 0, 0, 0.100);
-        align-items: flex-start;
-    }
-
-    .imagen3 {
-        border-radius: 0.69vw 0 0 0.69vw;
-        width: 32vw; /* Reduced from 40% of container to 32% */
-    }
-
-    .textos3,
-    .textos4,
-    .textos5 p {
-        width: auto; /* Reset width so content flows freely */
-        padding: initial; /* Reset padding to flow correctly */
-    }
-    
-    .textos3 {
-        font-size: 2.22vw;
-    }
-    
-    .textos4 {
-        flex-direction: row;
-        gap: 2.08vw;
-    }
-    
-    .textos5 p {
-        padding: 0 0.69vw 0.69vw 0.69vw;
-    }
-
-    .titulos {
-        margin-left: 6.94vw;
-        flex-direction: row;
-        gap: 51.5vw;
-        font-size: 1.67vw;
-    }
-    
-    /* --- Social Media and Form --- */
-    
-    .red_sociales {
-        margin-right: 3.47vw;
-        padding: 0;
-        font-size: 1.11vw;
-        text-align: start;
-    }
-
-    .botones {
-        align-items: flex-start;
-        gap: 0.69vw;
-    }
-
-    .twitter:hover,
-    .facebook:hover,
-    .youtube:hover,
-    .instagram:hover {
-        transform: scale(1.05);
-        box-shadow: 0 0.28vw 0.69vw rgba(0, 0, 0, 0.2);
-    }
-
-    .twitter,
-    .facebook,
-    .youtube,
-    .instagram {
-        width: 38.19vw;
-        height: 6.94vh;
-    }
-
-    /* --- Form Styles --- */
-    form {
-        width: 50vw;
-        max-width: 41.67vw;
-    }
-
-    button {
-        width: auto;
-    }
-    
-    /* --- Absolute Positioning (Re-enabled for desktop) --- */
-    .absoluto {
-        display: flex;
-        position: absolute;
-        top: 27.78vw;
-        left: 4.17vw;
-        width: 37vw;
-        box-shadow: 0.14vw 0.14vw rgba(0, 0, 0, 0.200);
-    }
+.absoluto{
+    position: absolute;
+    top: 400px;
+    left: 60px;
+    width: 37%;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.200);
 }
